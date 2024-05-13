@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ih-true {
+            height: auto;
+            overflow: hidden;
+        }
+
+        .ih-false {
+            height: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="ih-true seo-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis vero perspiciatis recusandae. Aut
+        voluptatem impedit nam optio? Facilis tenetur saepe mollitia distinctio a ex sequi beatae provident, laudantium
+        voluptatum delectus doloremque illo et dolorem ullam atque quos. Eveniet ut blanditiis rem, adipisci eligendi
+        modi, illum magnam beatae rerum odit quis laborum tempora cupiditate laudantium. Voluptatem dignissimos numquam,
+        maxime alias quas unde tempore voluptas nam officiis adipisci, mollitia quis accusantium animi. Accusantium
+        impedit maiores, eius provident corporis sint eligendi culpa assumenda! Sapiente corporis recusandae expedita,
+        est officia ab error repellendus vel nulla molestias, at fuga tempore minima? Sed, magni aspernatur.
+    </p>
+    <button>click</button>
+
+    <script>
+        window.addEventListener('load', (e) => {
+            var seoText = document.getElementsByClassName('seo-text')[0];
+
+            seoText.classList.toggle('ih-false');
+
+            document.getElementsByTagName('button')[0].addEventListener('click', () => {
+                seoText.classList.toggle('ih-false');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
