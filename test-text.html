@@ -9,9 +9,10 @@
 
 <body>
     <p>Українська версія</p>
-    <ul></ul>
+    <ul id="ua"></ul>
     <p>кацапська</p>
-    <ul></ul>
+    <ul id="ru"></ul>
+
     <script>
         fetch("ua.json")
             .then(response => response.json())
@@ -23,7 +24,7 @@
                     console.log(data.faq[i].title);
                     console.log(data.faq[i].text);
 
-                    document.getElementsByTagName('ul')[0].insertAdjacentHTML('beforeend', `
+                    document.getElementById('ua').insertAdjacentHTML('beforeend', `
                                         <li>
                                             <strong>${data.faq[i].title}</strong>
                                             <p>${data.faq[i].text}</p>
@@ -35,8 +36,9 @@
 
             })
             .catch(error => console.error("Помилка завантаження JSON:", error));
+    </script>
 
-
+    <script>
         fetch("ru.json")
             .then(response => response.json())
             .then(data => {
@@ -47,7 +49,7 @@
                     console.log(data.faq[i].title);
                     console.log(data.faq[i].text);
 
-                    document.getElementsByTagName('ul')[1].insertAdjacentHTML('beforeend', `
+                    document.getElementById('ru').insertAdjacentHTML('beforeend', `
                                         <li>
                                             <strong>${data.faq[i].title}</strong>
                                             <p>${data.faq[i].text}</p>
